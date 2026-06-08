@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tinnitus-Kompass – Kostenloser PDF-Leitfaden | Tinnituspraxis Seedorf</title>
+<meta name="description" content="Was steckt wirklich hinter Ihrem Tinnitus? Der kostenlose Tinnitus-Kompass von Boris Seedorf erklärt Ursachen, das Drei-Säulen-Modell und gibt erste Übungen. PDF, sofort per Mail.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://assets.quentn.com/fb/0.4/dist-user-wc/embed-form.umd.min.js" defer></script>
+<style>
+  :root {
+    --bg:         #ece9e1;
+    --green:      #7ed957;
+    --green-mid:  #5cb83c;
+    --green-dark: #3d7a28;
+    --text:       #1a1a1a;
+    --text-mid:   #555;
+    --text-light: #888;
+    --white:      #ffffff;
+    --card-bg:    #f9f8f5;
+    --border:     #dbd7ce;
+    --footer-bg:  #1e1e1e;
+    --shadow:     0 2px 16px rgba(0,0,0,0.07);
+    --radius:     12px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--white);
+    padding: 18px 32px;
+    border-bottom: 3px solid var(--green);
+  }
+  .header-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: inherit;
+  }
+  .logo-wrap img {
+    height: 54px;
+    width: auto;
+  }
+  .logo-text strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    color: var(--text);
+    text-transform: uppercase;
+  }
+  .logo-text span {
+    font-size: 11px;
+    color: var(--text-light);
+    letter-spacing: .04em;
+  }
+  .header-link {
+    font-size: 13px;
+    color: var(--green-dark);
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .header-link:hover { text-decoration: underline; }
+  @media (max-width: 500px) { .header-link { display: none; } }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--green);
+    color: white;
+    padding: 56px 24px 52px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: clamp(24px, 5vw, 40px);
+    font-weight: 700;
+    margin-bottom: 16px;
+    line-height: 1.25;
+  }
+  .hero p {
+    font-size: 17px;
+    opacity: .95;
+    max-width: 560px;
+    margin: 0 auto 30px;
+    line-height: 1.75;
+  }
+  .hero-scroll-btn {
+    display: inline-block;
+    background: white;
+    color: var(--green-dark);
+    font-weight: 700;
+    font-size: 16px;
+    padding: 15px 36px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .hero-scroll-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.28); }
+
+  /* ── MAIN ── */
+  main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 52px 20px 80px;
+  }
+
+  /* ── WAS DRIN STEHT ── */
+  .was-drin {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 36px 32px;
+    margin-bottom: 40px;
+  }
+  .was-drin h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: var(--text);
+  }
+  .kompass-punkte {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .kompass-punkte li {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .punkt-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .punkt-text strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 3px;
+  }
+  .punkt-text span {
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.6;
+  }
+
+  /* ── FORM SEKTION ── */
+  .form-section {
+    background: var(--green);
+    border-radius: var(--radius);
+    padding: 36px 32px 28px;
+    text-align: center;
+  }
+  .form-section h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+  }
+  .form-section p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.92);
+    margin-bottom: 24px;
+    line-height: 1.65;
+  }
+  .form-wrap {
+    background: white;
+    border-radius: 10px;
+    padding: 24px 20px 8px;
+    text-align: left;
+  }
+  .form-hinweis {
+    font-size: 12px;
+    color: rgba(255,255,255,0.75);
+    margin-top: 16px;
+    line-height: 1.5;
+  }
+
+  /* ── AUTOR ── */
+  .autor-box {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 28px 32px;
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .autor-box img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 3px solid var(--green);
+  }
+  .autor-text strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .autor-text span {
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 1.6;
+  }
+  @media (max-width: 480px) {
+    .autor-box { flex-direction: column; }
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--footer-bg);
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    padding: 28px 24px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  footer a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+  }
+  footer a:hover { color: white; text-decoration: underline; }
+  .footer-links {
+    margin-top: 8px;
+    font-size: 12px;
+  }
+  .footer-links a { margin: 0 8px; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a class="logo-wrap" href="https://www.tinnituspraxis-seedorf.de">
+      <img src="ohr.png" alt="Tinnituspraxis Seedorf">
+      <div class="logo-text">
+        <strong>Tinnituspraxis Seedorf</strong>
+        <span>Boris Seedorf · Heilpraktiker · Ahrensburg</span>
+      </div>
+    </a>
+    <a class="header-link" href="https://www.tinnituspraxis-seedorf.de">Zur Praxis-Webseite</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Ihr kostenloser Tinnitus-Kompass</h1>
+  <p>Was steckt hinter Ihrem Ohrgeräusch? Und was können Sie selbst tun? Dieser Leitfaden gibt klare Antworten – aus der Praxis, auf 20 Seiten, kostenlos per Mail.</p>
+  <a class="hero-scroll-btn" href="#kompass-anfordern">Jetzt kostenlos anfordern</a>
+</section>
+
+<!-- MAIN -->
+<main>
+
+  <!-- WAS DRIN STEHT -->
+  <div class="was-drin">
+    <h2>Was Sie im Tinnitus-Kompass erwartet</h2>
+    <ul class="kompass-punkte">
+      <li>
+        <div class="punkt-icon">🔍</div>
+        <div class="punkt-text">
+          <strong>Die häufigsten Ursachen – endlich verständlich erklärt</strong>
+          <span>Lärm, Stress, Durchblutung, Nerven: Welcher Mechanismus steckt hinter Ihrem Tinnitus? Sie erkennen Muster, die Ihnen bisher niemand gezeigt hat.</span>
+        </div>
+      </li>
+      <li>
+        <div class="punkt-icon">🧭</div>
+        <div class="punkt-text">
+          <strong>Das Drei-Säulen-Modell der Tinnitus-Behandlung</strong>
+          <span>Warum ein einziger Ansatz selten reicht – und was wirklich wirkt, wenn Körper, Nervensystem und Psyche zusammenspielen.</span>
+        </div>
+      </li>
+      <li>
+        <div class="punkt-icon">✅</div>
+        <div class="punkt-text">
+          <strong>Erste Übungen, die Sie sofort ausprobieren können</strong>
+          <span>Keine Theorie um der Theorie willen. Drei konkrete Schritte, die Sie noch heute angehen können.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- FORMULAR -->
+  <div class="form-section" id="kompass-anfordern">
+    <h2>Tinnitus-Kompass kostenlos sichern</h2>
+    <p>E-Mail eintragen – Sie bekommen eine kurze Bestätigungsmail, und der Kompass kommt sofort danach. Kein Spam, jederzeit abmeldbar.</p>
+    <div class="form-wrap">
+      <qntn-form data-source="t88of5.eu-5.quentn-site.com" data-form-id="461"></qntn-form>
+    </div>
+    <p class="form-hinweis">Nach dem Absenden erhalten Sie eine Bestätigungsmail. Erst nach dem Klick auf den Link darin wird der Kompass zugeschickt. So stellen wir sicher, dass die Mail wirklich Ihnen gehört.</p>
+  </div>
+
+  <!-- AUTOR -->
+  <div class="autor-box">
+    <img src="https://static.wixstatic.com/media/83ca05_8054f0af572049d583e97712c46a73e2~mv2.png" alt="Boris Seedorf">
+    <div class="autor-text">
+      <strong>Boris Seedorf, Heilpraktiker</strong>
+      <span>Ich arbeite seit Jahren spezialisiert mit Tinnitus-Betroffenen in meiner Praxis in Ahrensburg. Der Kompass fasst zusammen, was ich meinen Patienten immer wieder erkläre – weil viele erst im Gespräch verstehen, wie viele Hebel es gibt.</span>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div>Tinnituspraxis Seedorf &nbsp;|&nbsp; Telefon: 04102 - 6648201 &nbsp;|&nbsp; Mail: <a href="mailto:kontakt@privatpraxis-seedorf.de">kontakt@privatpraxis-seedorf.de</a></div>
+  <div class="footer-links">
+    <a href="https://www.tinnituspraxis-seedorf.de">Praxis-Webseite</a> &nbsp;&middot;&nbsp;
+    <a href="https://www.tinnituspraxis-seedorf.de/datenschutz">Datenschutz</a> &nbsp;&middot;&nbsp;
+    <a href="https://www.tinnituspraxis-seedorf.de/impressum">Impressum</a>
+  </div>
+</footer>
+
+</body>
+</html>
